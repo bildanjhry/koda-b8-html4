@@ -3,63 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Survey Perokok</title>
 </head>
 <body>
-    <div>
-        <h1 id="title">Survey Perokok</h1>
-        <div id="form-wrapper" align="start">
+    <div class="main-content">
+        <header>
+            <div></div>
+            <span>
+                <h1 id="title">Survey Perokok</h1>
+                <p>Form survey perokok di Koda Tech Academy</p>
+                <p>* Required</p>
+            </span>
+        </header>
+        <div id="form-wrapper" class="form-wrapper">
             <form action="./table-survey/index.html" id="form-surver-perokok">
                 <div>
-                    <label for="name">Siapa nama anda?</label>
+                    <label for="name">Siapa nama anda? </label>
                     <div>
-                        <input type="text" name="name" id="name">
+                        <input 
+                        placeholder="Masukan Nama Anda"
+                        type="text" name="name" id="name">
                     </div>
-                     <label for="age">Berapa umur anda?</label>
-                     <div>
-                        <input type="number" name="age" id="age">
-                     </div>
+                </div>
+                <div>
+                    <label for="age">Berapa umur anda? </label>
+                    <div>
+                       <input 
+                       placeholder="Berapa Umur Anda"
+                       type="number" name="age" id="age">
+                    </div>
                 </div>
                 <div>
                     <label>Apa jenis kelamin anda?</label>
                     <div>
-                        <input type="radio" name="gender" id="male" value="male">
-                        <label for="male">Laki-laki</label>
-                        <input type="radio" name="gender" id="female" value="female">
-                        <label for="female">Perempuan</label>
+                        <section>
+                            <input type="radio" name="gender" id="male" value="male">
+                            <label for="male">Laki-laki</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="gender" id="female" value="female">
+                            <label for="female">Perempuan</label>
+                        </section>
                     </div>
                 </div>
                 <div>
                     <label>Apakah anda perokok?</label>
                     <div>
-                        <input type="radio" name="smoker" id="ya" value="ya">
-                        <label for="ya">Ya</label>
-                        <input type="radio" name="smoker" id="tidak" value="tidak">
-                        <label for="tidak">Tidak</label>
+                        <section>
+                            <input type="radio" name="smoker" id="ya" value="ya">
+                            <label for="ya">Ya</label>
+                        </section>
+                        <section>
+                            <input type="radio" name="smoker" id="tidak" value="tidak">
+                            <label for="tidak">Tidak</label>
+                        </section>
                     </div>
                 </div>
                 <div>
                     <label>Jika anda perokok, rokok apa yang anda pernah coba?</label>
                     <div>
-                        <input type="checkbox" name="gudang-garam-filter" id="gudang-garam-filter">
-                        <label for="gudang-garam-filter">Gudang Garam Filter</label>
+                        <div>
+                            <input type="checkbox" name="gudang-garam-filter" id="gudang-garam-filter">
+                            <label for="gudang-garam-filter">Gudang Garam Filter</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="lucky-strike" id="lucky-strike">
+                            <label for="lucky-strike">Lucky Strike</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="marlboro" id="marlboro">
+                            <label for="marlboro">Marlboro</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="esse" id="esse">
+                            <label for="esse">Esse</label>
+                        </div>
                     </div>
-                    <div>
-                        <input type="checkbox" name="lucky-strike" id="lucky-strike">
-                        <label for="lucky-strike">Lucky Strike</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="marlboro" id="marlboro">
-                        <label for="marlboro">Marlboro</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="esse" id="esse">
-                        <label for="esse">Esse</label>
-                    </div>
-                    <div>
-                        <button type="submit">Submit</button>
-                        <button type="reset">Reset</button>
-                    </div>
+                </div>
+                <div>
+                    <button type="submit">Simpan</button>
+                    <button type="reset">Reset</button>
                 </div>
             </form>
         </div>

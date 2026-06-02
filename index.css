@@ -1,0 +1,190 @@
+:root {
+    --border-radius:12px;
+    --font-size:18px;
+    --font-weight:500;
+    --purple-color:#663ab6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0ebf8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content {
+    display: flex;
+    width: 60rem;
+    height: 70rem;
+    flex-direction: column;
+    justify-self: center;
+    background-color: transparent;
+}
+
+.main-content > header  {
+    position: relative;
+    margin-top: 10px;
+    width: 60rem;
+}
+
+.main-content > header > div {
+    width: 60rem;
+    height: 12rem;
+    background-color: #663ab6;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.main-content > header > span {
+    text-align: start;
+    width: 60rem;
+    position: absolute;
+    top: 10px;
+    z-index: 3;
+    font-size: 16px;
+    height: 12rem;
+    background-color: white;
+    padding: 0px 25px 20px 25px;
+    border-radius: 0  0 var(--border-radius) var(--border-radius);
+    border: 1px solid rgb(226, 226, 226);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 1rem;
+    font-weight: 500;
+}
+
+.main-content > header > span > h1 {
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0;
+}
+
+.main-content > header > span > p:last-child {
+    color: red;
+}
+
+.form-wrapper {
+    margin-top: 2rem;
+}
+
+.form-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 45px;
+}
+
+.form-wrapper > form > div:not(:last-child) {
+    min-height: 8rem;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    border: 1px solid rgb(215, 215, 215);
+}
+
+.form-wrapper > form >  div:first-child > label,
+.form-wrapper >  form >  div > label {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-wrapper > form > div:first-child > label > span,
+.form-wrapper > form > div > label > span {
+    color: red;
+}
+
+.form-wrapper > form > div:first-child > div,
+.form-wrapper > form > div:nth-child(2) > div {
+    height: 2.5rem;
+    width: fit-content;
+    margin-top: auto;
+}
+
+.form-wrapper > form > div:first-child  > div > input,
+.form-wrapper > form > div:nth-child(2) > div > input {
+    border: none;
+    font-size: var(--font-size);
+    padding: 10px 2px;
+    font-weight: var(--font-weight);
+    width: 25rem;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(161, 161, 161);
+}
+
+.form-wrapper > form > div:nth-child(3) > div,
+.form-wrapper > form > div:nth-child(4) > div {
+    border: none;
+    display: flex;
+    margin-top: 2.5rem;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: var(--font-weight);
+    width: 15rem;
+    gap: 10px;
+}
+
+.form-wrapper > form > div:nth-child(5) > div {
+    border: none;
+    display: flex;
+    margin-top: 2.5rem;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: var(--font-weight);
+    width: 15rem;
+    gap: 10px;
+}
+
+.form-wrapper > form > div:nth-child(n3) > div > section > label {
+    cursor: pointer;
+}
+
+.form-wrapper > form > div:nth-child(3) > div > section > input,
+.form-wrapper > form > div:nth-child(4) > div > section > input {
+    height: 17px;
+    width: 17px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.form-wrapper > form > div:nth-child(5) > div > div > input {
+    height: 17px;
+    cursor: pointer;
+    width: 17px;
+    margin-right: 10px;
+}
+
+.form-wrapper > form > div:last-child {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.form-wrapper > form > div:last-child > button {
+    background-color: var(--purple-color);
+    width: 8rem;
+    font-size: var(--font-size);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.form-wrapper > form > div:last-child > button:last-child {
+    background-color: transparent;
+    color: var(--purple-color);
+}
+
+.form-wrapper > form > div:last-child > button:first-child:hover {
+    background-color: #653ab6b3 ;
+}
