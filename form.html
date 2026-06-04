@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const body = document.querySelector("body")
+        const h1 = document.createElement("h1")
+        h1.innerHTML = "Survey Perokok"
+        body.appendChild(h1)
+        const form = document.createElement("form")
+        form.setAttribute('action', "./table-survey/index.html")
+        const submitButton = document.createElement("button")
+        submitButton.setAttribute("type", "submit")
+        const resetButton = document.createElement("button")
+        resetButton.setAttribute("type", "reset")
+        submitButton.innerHTML = "Submit"
+        resetButton.innerHTML = "Reset"
+
+        body.appendChild(form)
+        
+        const lab = [
+            { 
+                label:"Siapa nama anda?",
+                type: "text"
+            }, 
+            {
+                label:"Berapa umur anda?",
+                type: "number"
+            },
+            {
+                label:"Apakah jenis kelamin anda?",
+                type: "radio",
+                for:"gender",
+                options: ["laki-laki", "perempuan"]
+            },
+            {
+                label:"Apakah anda perokok?",
+                type: "radio",
+                for:"smoker",
+                options: ["Ya", "Tidak"]
+            },
+            {
+                label:"Jika anda perokok, rokok apa saja yang pernah anda coba?",
+                type: "checkbox",
+                for:"option-cig",
+                options: ["Gudang Garam Filter", "Lucky Strike", "Marlboro", "Esse"]
+            }          
+        ]
+        const result = lab.map((item) => {
+            const label = document.createElement("label")
+            label.innerHTML = item.label
+            const div = document.createElement("div")
+            const input = document.createElement("input")
+            form.appendChild(label)
+            form.appendChild(div)
+
+            if(item.options){
+                if(item.type === "checkbox"){
+                    item.options.forEach((element, index) => {
+                    const newDiv =  document.createElement('div')
+                    form.appendChild(newDiv)
+                    const labels = document.createElement("label")
+                    const input = document.createElement("input")
+                    labels.innerHTML = element
+                    input.setAttribute("type", item.type)
+                    input.setAttribute("id", index)
+                    input.setAttribute("name", item.for)
+                    labels.setAttribute("for", index)
+                    newDiv.appendChild(input)
+                    newDiv.appendChild(labels)
+                });
+                } else {
+                    item.options.forEach((element, index) => {
+                        const labels = document.createElement("label")
+                        const input = document.createElement("input")
+                        labels.innerHTML = element
+                        input.setAttribute("type", item.type)
+                        input.setAttribute("name", item.for)
+                        input.setAttribute("id", element)
+                        labels.setAttribute("for", element)
+                        div.appendChild(input)
+                        div.appendChild(labels)
+                    });
+                }
+            } else {
+                input.setAttribute("type", item.type)
+                div.appendChild(input)
+            }
+        })
+
+        form.appendChild(submitButton)
+        form.appendChild(resetButton)
+
+    </script>
+</body>
+</html>
