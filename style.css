@@ -188,3 +188,23 @@ body {
 .form-wrapper > form > div:last-child > button:first-child:hover {
     background-color: #653ab6b3 ;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+table > thead {
+    background-color: rgb(191, 254, 152);
+}
+
+.table-body {
+    text-align: center;
+}
+
+.table-body > tr {
+    border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+.listing {
+    margin-bottom: 5px;
+}
