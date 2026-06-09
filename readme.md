@@ -9,14 +9,16 @@ Penggunaan layout CSS pada task ini cenderung menggunakan flexbox dengan beberap
 - align-items 
 - justify-self
 
-## Updated
-### Program ini menerapan Library Tailwind untuk styling dan mengubah semua alur dari manual css ke class based styling.
-
 ## Preview Demo
-![alt text](assets/image.png)
+![alt text](assets/image.png)  ![alt text](assets/image-table.png)
+Table
 
-## Preview Demo Table Survey
-![alt text](assets/image-table.png)
 
-## Preview Demo styling dengan Tailwind
+## Updated
+Program ini diupdate dengan menerapkan beberapa Library antara lain:
+- Tailwind untuk styling dan mengubah semua alur dari manual css ke class based styling
+- jQuery untuk manipulasi DOM.
+
+
+## Preview Demo styling dengan Tailwind & jQuery
 ![alt text](assets/image-update.png)
