@@ -191,10 +191,23 @@ body {
 
 table {
     border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.21);
+    border-bottom: 20px;
+    border-spacing: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-table > thead {
+table > thead > tr {
     background-color: rgb(191, 254, 152);
+}
+
+table > thead > tr > th:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+table > thead > tr > th:last-of-type {
+    border-top-right-radius: 10px;
 }
 
 .table-body {
@@ -204,6 +217,10 @@ table > thead {
 .table-body > tr {
     border-bottom: 1px solid rgb(194, 194, 194);
 }
+
+.table-body > tr:last-of-type > td:first-of-type {
+    border-bottom-left-radius: 10px;
+}   
 
 .listing {
     margin-bottom: 5px;
