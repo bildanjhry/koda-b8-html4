@@ -189,9 +189,19 @@ body {
     background-color: #653ab6b3 ;
 }
 
+.table-container {
+    padding: 3rem 5rem;
+    height: 100vh;
+    background-color: rgb(250, 255, 247);
+}
+
+#table-wrapper > #title {
+    margin-bottom: 3rem;
+}
+
 table {
     border-collapse: collapse;
-    background-color: rgba(255, 255, 255, 0.21);
+    background-color: rgba(255, 255, 255, 0.742);
     border-bottom: 20px;
     border-spacing: 0;
     border-top-left-radius: 10px;
@@ -199,7 +209,13 @@ table {
 }
 
 table > thead > tr {
-    background-color: rgb(191, 254, 152);
+    background-color: rgb(198, 255, 162);
+}
+
+
+nav > a {
+    text-decoration: none;
+    color:blue;
 }
 
 table > thead > tr > th:first-of-type {

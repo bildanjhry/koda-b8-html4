@@ -25,7 +25,7 @@ dataSurvey.forEach((list, idx) => {
     const rokok = document.createElement("td")
     tr.append(no, name, age, gender, smoker)
 
-    if(list.rokok){
+    if(list.rokok && list.smoker === 'ya'){
         list.rokok.forEach((cig) => {
             const res = cig.split("-").map((item) => 
                 item.charAt(0).toUpperCase()+item.slice(1)
