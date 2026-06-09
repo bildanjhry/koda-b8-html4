@@ -1,6 +1,14 @@
 $(document).ready(function(){
   const formSurvey = $("#form-survey-perokok")
   const savedSurvey = window.localStorage.getItem("survey")
+	const inputs = $("input")
+
+	function handleLastSubmit(){
+			const items = JSON.parse(savedSurvey)
+			items[length-1].forEach((item) => {
+					formSurvey.child
+			})
+	}
 
   function handleSubmit(e){
 		e.preventDefault()
