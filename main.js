@@ -1,10 +1,18 @@
 const formSurvey = document.getElementById("form-survey-perokok")
+const savedSurvey = window.localStorage.getItem("survey")
+const inputs = document.querySelectorAll("input")
+
+function handleLastSubmit(){
+    const items = JSON.parse(savedSurvey)
+    items[length-1].forEach((item) => {
+        formSurvey.child
+    })
+}
 
 function handleSubmit(e){
     e.preventDefault()
     try {
         const datas = new FormData(e.target)
-        const savedSurvey = window.localStorage.getItem("survey")
         let dataArray = []
         const formData = {}
         const formatObjectData = Object.fromEntries(datas.entries())
