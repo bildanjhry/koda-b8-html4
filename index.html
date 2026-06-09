@@ -3,87 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+      </script>
     <title>Survey Perokok</title>
 </head>
-<body>
-    <div class="main-content">
-        <header>
-            <div></div>
-            <span>
-                <h1 id="title">Survey Perokok</h1>
-                <p>Form survey perokok di Koda Tech Academy</p>
-                <p>* Required</p>
+<body class="flex justify-center bg-[#f0ebf8] font-family-arial">
+    <div class=" w-[50rem] justify-center flex flex-col">
+        <header class=" relative w-full flex flex-col mb-8 justify-center
+        rounded-lg flex pt-2">
+            <div class="bg-[#663ab6] rounded-t-lg w-full h-3 z-0"></div>
+            <span class="w-full h-46 pl-8 pt-6 bg-white rounded-b-lg">
+                <h1 id="title" class="text-3xl mb-6 font-medium">Survey Perokok</h1>
+                <p class="mb-4">Form survey perokok di Koda Tech Academy</p>
+                <p class="text-red-500 ">* Required</p>
             </span>
         </header>
-        <div id="form-wrapper" class="form-wrapper">
-            <form action="" id="form-survey-perokok">
-                <div>
-                    <label for="name">Siapa nama anda? </label>
+        <div id="form-wrapper" class=" w-full">
+            <form action="" id="form-survey-perokok" class="flex flex-col gap-6">
+                <div class="pl-8  w-full justify-start pt-8 bg-white rounded-lg flex flex-col h-46 ">
+                    <label class="mb-11 text-xl" for="name">Siapa nama anda? </label>
                     <div>
                         <input 
+                        class="border-b text-sm pb-3"
                         placeholder="Masukan Nama Anda"
                         type="text" name="name" id="name">
                     </div>
                 </div>
-                <div>
-                    <label for="age">Berapa umur anda? </label>
+                <div class="pl-8  w-full justify-start pt-8 bg-white rounded-lg flex flex-col h-46 ">
+                    <label class="mb-11 text-xl" for="age">Berapa umur anda? </label>
                     <div>
                        <input 
+                       class="border-b text-sm pb-3"
                        placeholder="Berapa Umur Anda"
                        type="number" name="age" id="age">
                     </div>
                 </div>
-                <div>
-                    <label>Apa jenis kelamin anda?</label>
-                    <div>
-                        <section>
+                <div class="pl-8  w-full justify-start pt-8 bg-white rounded-lg flex flex-col h-50 ">
+                    <label class="text-xl mb-8">Apa jenis kelamin anda?</label>
+                    <div class="text-md">
+                        <section class="mb-2">
                             <input type="radio" name="gender" id="male" value="male">
-                            <label for="male">Laki-laki</label>
+                            <label class="ml-1" for="male">Laki-laki</label>
                         </section>
                         <section>
                             <input type="radio" name="gender" id="female" value="female">
-                            <label for="female">Perempuan</label>
+                            <label class="ml-1" for="female">Perempuan</label>
                         </section>
                     </div>
                 </div>
-                <div>
-                    <label>Apakah anda perokok?</label>
-                    <div>
-                        <section>
+                 <div class="pl-8  w-full justify-start pt-8 bg-white rounded-lg flex flex-col h-50 ">
+                    <label class="text-xl mb-8">Apakah anda perokok?</label>
+                    <div class="text-md">
+                        <section class="mb-2">
                             <input type="radio" name="smoker" id="ya" value="ya">
-                            <label for="ya">Ya</label>
+                            <label class="ml-1" for="ya">Ya</label>
                         </section>
                         <section>
                             <input type="radio" name="smoker" id="tidak" value="tidak">
-                            <label for="tidak">Tidak</label>
+                            <label class="ml-1" for="tidak">Tidak</label>
                         </section>
                     </div>
                 </div>
-                <div>
-                    <label>Jika anda perokok, rokok apa yang anda pernah coba?</label>
-                    <div>
-                        <div>
+                <div class="pl-8  w-full justify-start pt-8 bg-white rounded-lg flex flex-col h-66 ">
+                    <label class="text-xl mb-8">Jika anda perokok, rokok apa yang anda pernah coba?</label>
+                    <div class="text-md">
+                        <div class="mb-1">
                             <input type="checkbox" name="gudang-garam-filter" id="gudang-garam-filter">
-                            <label for="gudang-garam-filter">Gudang Garam Filter</label>
+                            <label class="ml-1" for="gudang-garam-filter">Gudang Garam Filter</label>
                         </div>
-                        <div>
+                        <div class="mb-1">
                             <input type="checkbox" name="lucky-strike" id="lucky-strike">
-                            <label for="lucky-strike">Lucky Strike</label>
+                            <label class="ml-1" for="lucky-strike">Lucky Strike</label>
                         </div>
-                        <div>
+                        <div class="mb-1">
                             <input type="checkbox" name="marlboro" id="marlboro">
-                            <label for="marlboro">Marlboro</label>
+                            <label class="ml-1" for="marlboro">Marlboro</label>
                         </div>
-                        <div>
+                        <div class="mb-1">
                             <input type="checkbox" name="esse" id="esse">
-                            <label for="esse">Esse</label>
+                            <label class="ml-1" for="esse">Esse</label>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button type="submit">Simpan</button>
-                    <button type="reset">Reset</button>
+                <div class="h-22 mb-4 flex flex-rows justify-between items-center">
+                    <button class="h-12 w-27 text-white rounded-lg cursor-pointer bg-[#653ab6b3]" type="submit">Simpan</button>
+                    <button class="cursor-pointer text-[#653ab6b3]" type="reset">Reset</button>
                 </div>
             </form>
         </div>
